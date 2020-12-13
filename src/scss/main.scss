@@ -1,5 +1,6 @@
+@import "./mixins";
 @import "./variables";
-@import "./reseat";
+@import "./reset";
 @import "./typography.scss";
 @import "./buttons";
 
@@ -8,3 +9,6 @@
 @import "./coponents/plan";
 @import "./coponents/banners";
 @import "./coponents/hero";
+@import "./coponents/space";
+@import "./coponents/service";
+@import "./coponents/products";

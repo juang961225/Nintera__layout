@@ -1,9 +1,21 @@
 .hero {
   &__container {
     padding: 0 12px;
+
+    @include viewport-desktop {
+      display: flex;
+      max-width: 1240px;
+      margin: 0 auto;
+      width: 100%;
+    }
   }
   &__video {
     position: relative;
+
+    @include viewport-desktop {
+      order: 2;
+    }
+
     &-icon {
       left: 50%;
       position: absolute;
@@ -21,6 +33,12 @@
     background-position: 100% 93%;
     background-color: $olive;
     padding: 48px 12px;
+
+    @include viewport-desktop {
+      padding: 170px 58px 148px;
+      background-position: 109% 50%;
+      background-size: 167px 158px;
+    }
   }
   &__headline {
     background: $vivid-yellow;
@@ -32,11 +50,27 @@
     line-height: 32px;
     margin-bottom: 18px;
     padding: 2px 0;
+
+    @include viewport-desktop {
+      font-size: 40px;
+      line-height: 48px;
+      max-width: 400px;
+      margin-bottom: 48px;
+    }
   }
   &__paragraph {
     color: $white;
-    display: inline-block;
+    display: block;
     margin-bottom: 22px;
-    width: 200px;
+    max-width: 200px;
+
+    @include viewport-desktop {
+      margin-bottom: 52px;
+      max-width: 460px;
+    }
+  }
+
+  &__button {
+    width: 138px;
   }
 }
