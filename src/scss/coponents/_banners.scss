@@ -1,0 +1,70 @@
+.banner {
+  background-color: $white;
+  &__wrapper {
+    &--center {
+      height: 232px;
+      background-color: $vivid-orange;
+      display: flex;
+      flex-direction: column;
+      color: $white;
+      padding-left: 16px;
+    }
+  }
+
+  &__eyebrow {
+    margin-top: 20px;
+    font-family: $typography;
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  &__title {
+    margin-top: 6px;
+    font-size: 32px;
+    font-family: $typography;
+    line-height: 29px;
+    font-weight: 700;
+  }
+
+  &__top {
+    margin-top: 22.19px;
+    font-family: $typography;
+    font-weight: 400;
+    font-size: 13px;
+  }
+
+  &__short {
+    font-family: $typography;
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 4px;
+    opacity: 0.8;
+
+    &--price {
+      opacity: 1;
+    }
+
+    &--bold {
+      font-size: 21px;
+      font-weight: 700;
+    }
+  }
+
+  &__text-botton {
+    font-family: $typography;
+    font-weight: 400;
+    font-size: 18px;
+    opacity: 0.6;
+    margin-top: 3.81px;
+    text-decoration: line-through;
+  }
+
+  &__text {
+    font-family: $typography;
+    font-weight: 400;
+    padding-left: 18px;
+    padding-top: 18.92px;
+    padding-bottom: 33px;
+    width: 245px;
+  }
+}

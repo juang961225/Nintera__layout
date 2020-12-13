@@ -1,46 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/d2e9972c75.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/d2e9972c75.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Document</title>
-</head>
-<body>
-  <header class="header">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <img src="./img/Cuadrilla_logo_negro.png" alt="logo" />
+      </div>
 
-    <div class="header__logo">
-      <img src="./img/Cuadrilla_logo_negro.png" alt="logo">
-    </div>
+      <div class="header__container">
+        <a href="#">
+          <i class="header__icon header__icon--card">
+            <img src="./img/cart.svg" alt="icono carrito compras">
+          </i>
+        </a>
 
-  <div class="header__container">
-    <i class="header__icon fas fa-shopping-cart"></i>
+        <a href="#">
+          <i class="header__icon">
+            <img src="./img/calendar.svg" alt="icono calendario"
+            ></i>
+        </a>
 
-    <i class="header__icon fas fa-calendar-day"></i>
-
-    <div class="header__hamburger-menu">
-      <input class="header__button" id="btn-menu" type="checkbox">
-      <label class="header__label" for="btn-menu">
-        <div class="header__open">
-          <img class="header__image" src="./img/ico_hamburger.svg" alt="menu">
+        <div class="header__hamburger-menu">
+          <input class="header__button" id="btn-menu" type="checkbox" />
+          <label class="header__label" for="btn-menu">
+            <div class="header__open">
+              <img
+                class="header__image"
+                src="./img/ico_hamburger.svg"
+                alt="menu"
+              />
+            </div>
+          </label>
+          <nav class="header__menu">
+            <ul class="header__list">
+              <li class="header__item">
+                <a class="header__link" href="#">Crea</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">Aprende</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">Tienda</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">Eventos</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">La cuadrilla</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">Blog</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-      </label>
-      <nav class="header__menu">
-        <ul class="header__list" >
-          <li class="header__item"><a class="header__link" href="#">Crea</a></li>
-          <li class="header__item"><a class="header__link" href="#">Aprende</a></li>
-          <li class="header__item"><a class="header__link" href="#">Tienda</a></li>
-          <li class="header__item"><a class="header__link" href="#">Eventos</a></li>
-          <li class="header__item"><a class="header__link" href="#">La cuadrilla</a></li>
-          <li class="header__item"><a class="header__link" href="#">Blog</a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-  </header>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="hero__container">
+        <div class="hero__video">  
+          <img class="hero__video-icon" src="./img/ico_play.svg" alt="Icon Play Video">
+          <img class="hero__video-image" src="./img/img.png" alt="Imagen Previsualización Vídeo">
+        </div> 
+        <div class="hero__description">
+          <div class="hero__headline">
+            Espacios pensados para todas tus necesidades.
+          </div>
+          <p class="hero__paragraph paragraph">
+            Desde maquinaria hasta bancos de trabajo y espacios personales completos, hacemos que comenzar tu camino en la fabricación sea fácil y accesible.
+          </p>
+          <a href="#" class="button-primary">
+            Conocemos
+          </a>
+        </div>
+      </div>
+    </section>
+<!--secions__________________________________________ -->
+    <section class="plan">
+      <div>
+        <h2 class="plan__title">Escoge tu plan</h2>
+        <p class="paragraph plan__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum neque quam, fermentum in lacus sit amet, semper placerat purus. Suspendisse ut est lorem.</p>
+      </div>
 
-
-
+      <article class="banner">
+        <div class="banner__wrapper banner__wrapper--center">
+          <span class="banner__eyebrow">Plan</span>
+          <h2 class="banner__title">Tu taller complete.</h2>
+          <span class="banner__top">Desde</span>
+          <span class="banner__short"> <sup>$</sup> <span class="banner__short--bold">300.000</span> /Mes</span>
+          <span class="banner__text-botton">$300.000</span>
+        </div>
+  
+        <div class="banner__wrapper banner__wrapper--botton">
+          <p class="paragraph banner__text">Accede a todas las máquinas y herramientas que necesitas para hacer realidad tus proyectos Fabrica todo lo que imagines. Accede a todas las máquinas habilitadas, herramientas manuales y electro-manuals de Cuadrilla. Aprovecha a la comunidad de creadores a tu alrededor. Si lo que necesitas es un taller flexible que se adapta a tus horarios, en donde puedas prototipar, fabricar, dar acabados y eventualmente comercializar, este es el plan que buscas.</p>
+          <div class="banner__botton">
+            <button class="button-primary banner__button">Saber más</button>
+            <button class="button-primary banner__button">Comprar</button>
+          </div>
+        </div>
+      </article>
     <script src="./index.js"></script>
-</body>
+  </body>
 </html>

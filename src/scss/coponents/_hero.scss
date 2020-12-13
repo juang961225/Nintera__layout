@@ -1,0 +1,42 @@
+.hero {
+  &__container {
+    padding: 0 12px;
+  }
+  &__video {
+    position: relative;
+    &-icon {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: 45px;
+    }
+    &-image {
+      display: block;
+    }
+  }
+  &__description {
+    background-image: url("../img/hero-graph.svg");
+    background-repeat: no-repeat;
+    background-position: 100% 93%;
+    background-color: $olive;
+    padding: 48px 12px;
+  }
+  &__headline {
+    background: $vivid-yellow;
+    color: $olive;
+    display: inline-block;
+    font-family: "Work Sans", sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 32px;
+    margin-bottom: 18px;
+    padding: 2px 0;
+  }
+  &__paragraph {
+    color: $white;
+    display: inline-block;
+    margin-bottom: 22px;
+    width: 200px;
+  }
+}
