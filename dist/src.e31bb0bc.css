@@ -153,6 +153,11 @@ button {
   color: #fff;
   padding-left: 16px;
 }
+.banner__wrapper--button {
+  margin-left: 18px;
+  margin-bottom: 18px;
+  margin-right: 4px;
+}
 .banner__eyebrow {
   margin-top: 20px;
   font-family: "Work Sans", sans-serif;
@@ -200,7 +205,12 @@ button {
   padding-left: 18px;
   padding-top: 18.92px;
   padding-bottom: 33px;
-  width: 245px;
+  font-size: 14px;
+  width: 236px;
+  font-weight: 20px;
+}
+.banner__button {
+  width: 114px;
 }
 
 .hero__container {
