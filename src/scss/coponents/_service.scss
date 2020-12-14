@@ -1,0 +1,47 @@
+.service {
+  &__wrapper {
+    background-color: $mostly-black;
+    color: $white;
+    height: 556px;
+    margin: 32px 12px;
+  }
+  &__title {
+    font-size: 28px;
+    font-weight: 600px;
+    line-height: 32px;
+    padding-left: 18px;
+    padding-top: 32px;
+    width: 250px;
+  }
+  &__text {
+    font-size: 16px;
+    font-weight: 400px;
+    line-height: 20px;
+    margin-left: 18px;
+    margin-top: 17px;
+    width: 260px;
+  }
+  &__button {
+    background-color: $white;
+    color: $black;
+    font-size: 16px;
+    font-weight: 600;
+    height: 40px;
+    line-height: 19px;
+    margin-left: 16px;
+    margin-top: 36px;
+    padding: 8px 0;
+    width: 168px;
+  }
+
+  &__image {
+    margin-top: 27px;
+    overflow: hidden;
+    img {
+      width: 272px;
+      height: 189px;
+      position: absolute;
+      left: -66px;
+    }
+  }
+}

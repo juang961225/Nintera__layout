@@ -1,0 +1,76 @@
+.form {
+  height: 717px;
+  width: 100%;
+  background-color: $very-light-gray;
+
+  &__title {
+    margin-top: 32px;
+    font-size: 28px;
+    font-weight: 600;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 12px;
+  }
+
+  &__table {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input {
+    margin-bottom: 27px;
+    border: none;
+    border-bottom: solid 1px $black;
+    background-color: $light-gray;
+    height: 38px;
+
+    &--select {
+      font-weight: 700;
+      font-size: 14px;
+      background-color: $very-light-gray;
+    }
+
+    &--message {
+      height: 94px;
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: $dark-gray;
+    opacity: 0.8;
+  }
+
+  &__box {
+    margin-bottom: 28px;
+    /* Doble-tamaño Checkboxes */
+    -ms-transform: scale(1.5); /* IE */
+    -moz-transform: scale(1.5); /* FF */
+    -webkit-transform: scale(1.5); /* Safari y Chrome */
+    -o-transform: scale(1.5); /* Opera */
+    border-radius: 0;
+    &--label {
+      opacity: 0.8;
+      font-size: 14px;
+      font-weight: 400;
+      margin-left: 8px;
+      a {
+        text-decoration: underline;
+        color: $vivid-blue;
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__button {
+    width: 114px;
+    height: 40px;
+    padding: 10px 31px;
+  }
+}

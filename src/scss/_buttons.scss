@@ -1,0 +1,32 @@
+.button-primary {
+  background: black;
+  color: $white;
+  display: inline-block;
+  font-weight: 700;
+  padding: 10px 26px;
+}
+.button {
+  display: block;
+  font-family: $typography;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 14px;
+  text-align: center;
+
+  &-primary {
+    background: $black;
+    color: $white;
+    display: inline-block;
+
+    @include viewport-desktop {
+      padding-left: 44px;
+      padding-right: 44px;
+    }
+  }
+
+  &-secondary {
+    background: $white;
+    border: 1px solid $black;
+    color: $black;
+  }
+}

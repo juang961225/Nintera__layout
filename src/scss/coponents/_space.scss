@@ -1,0 +1,79 @@
+.space {
+  background-color: black;
+  color: $white;
+  width: 100%;
+  &__title {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 32px;
+    padding-left: 12px;
+    padding-top: 32px;
+  }
+  &__text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    padding-left: 12px;
+    padding-top: 16px;
+  }
+  &__container-slider {
+    padding-top: 38.38px;
+  }
+
+  &__slider {
+    display: flex;
+    flex-flow: row nowrap;
+    overflow-x: scroll;
+    padding-left: 12px;
+  }
+
+  &__card {
+    width: 268px;
+    height: 308px;
+    display: block;
+    flex-shrink: 0;
+    margin-bottom: 32px;
+    background-color: $very-dark-gray;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__img {
+    padding-left: 18px;
+    padding-top: 36.4px;
+    width: 94px;
+  }
+  &__card-title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21px;
+    padding-left: 18px;
+    padding-top: 56.69px;
+  }
+  &__card-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    padding-left: 18px;
+    padding-top: 12.77px;
+  }
+
+  &__wrapper {
+    padding-left: 18px;
+    padding-top: 27.81px;
+  }
+
+  &__button {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    background-color: $white;
+    color: $vivid-orange;
+    padding: 10px 14px;
+    width: 114px;
+    height: 40px;
+    margin-right: 4px;
+  }
+}

@@ -1,0 +1,25 @@
+.contact {
+  &__span-wrapper {
+    margin-top: 14px;
+    height: 137px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__span {
+    font-size: 14px;
+    line-height: 20px;
+
+    &--bold {
+      font-weight: 500;
+    }
+
+    &--regular {
+      font-weight: 400;
+    }
+
+    &--regular:not(:last-of-type) {
+      margin-top: 4px;
+    }
+  }
+}

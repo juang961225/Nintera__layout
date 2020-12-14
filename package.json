@@ -1,0 +1,23 @@
+{
+  "name": "Nintera__layout",
+  "version": "1.0.0",
+  "description": "prueba de maquetacion",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juang961225/Nintera__layout.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juang961225/Nintera__layout/issues"
+  },
+  "homepage": "https://github.com/juang961225/Nintera__layout#readme",
+  "dependencies": {
+    "sass": "^1.30.0"
+  }
+}

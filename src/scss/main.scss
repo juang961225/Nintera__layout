@@ -1,0 +1,17 @@
+@import "./mixins";
+@import "./variables";
+@import "./reset";
+@import "./typography.scss";
+@import "./buttons";
+
+//components
+@import "./coponents/header";
+@import "./coponents/plan";
+@import "./coponents/banners";
+@import "./coponents/hero";
+@import "./coponents/space";
+@import "./coponents/service";
+@import "./coponents/products";
+@import "./coponents/form";
+@import "./coponents/contact";
+@import "./coponents/events";
