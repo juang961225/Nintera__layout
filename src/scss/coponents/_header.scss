@@ -29,10 +29,13 @@
     display: none;
   }
   &__button:checked ~ .header__menu {
-    margin: 10px;
+    margin: 0px;
     margin-left: -78%;
     transition: all 500ms ease;
+    position: fixed;
+    height: 100%;
   }
+
   &__label {
     color: #fff;
     display: block;
@@ -57,6 +60,8 @@
     position: absolute;
     transition: all 500ms ease;
     width: 100%;
+    z-index: 1;
+    background-color: white;
   }
   &__list {
     border-top: 1px solid $shadow;

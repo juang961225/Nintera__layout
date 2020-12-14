@@ -41,23 +41,44 @@
     }
   }
   &__headline {
-    background: $vivid-yellow;
-    color: $olive;
-    display: inline-block;
-    font-family: "Work Sans", sans-serif;
-    font-size: 26px;
-    font-weight: 600;
-    line-height: 32px;
-    margin-bottom: 18px;
-    padding: 2px 0;
+    &-container {
+      margin-bottom: 18px;
+      left: -24px;
+      padding-left: 24px;
+      position: relative;
+    }
 
-    @include viewport-desktop {
-      font-size: 40px;
-      line-height: 48px;
-      max-width: 400px;
-      margin-bottom: 48px;
+    &-text {
+      background: $vivid-yellow;
+      color: $olive;
+      display: inline-inline;
+      font-family: "Work Sans", sans-serif;
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 32px;
+      padding: 2px 0;
+      position: relative;
+      z-index: 10;
+
+      &::before {
+        background: $vivid-yellow;
+        content: " ";
+        height: 100%;
+        position: absolute;
+        left: -24px;
+        top: 0;
+        width: 25px;
+      }
+
+      @include viewport-desktop {
+        font-size: 40px;
+        line-height: 48px;
+        max-width: 400px;
+        margin-bottom: 48px;
+      }
     }
   }
+
   &__paragraph {
     color: $white;
     display: block;

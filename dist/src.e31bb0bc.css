@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Reset/normalize */
 * {
   box-sizing: border-box;
@@ -92,9 +93,11 @@ button {
   display: none;
 }
 .header__button:checked ~ .header__menu {
-  margin: 10px;
+  margin: 0px;
   margin-left: -78%;
   transition: all 500ms ease;
+  position: fixed;
+  height: 100%;
 }
 .header__label {
   color: #fff;
@@ -120,6 +123,8 @@ button {
   position: absolute;
   transition: all 500ms ease;
   width: 100%;
+  z-index: 1;
+  background-color: white;
 }
 .header__list {
   border-top: 1px solid #000000a1;
@@ -285,19 +290,35 @@ button {
     background-size: 167px 158px;
   }
 }
-.hero__headline {
+.hero__headline-container {
+  margin-bottom: 18px;
+  left: -24px;
+  padding-left: 24px;
+  position: relative;
+}
+.hero__headline-text {
   background: #d5e002;
   color: #444018;
-  display: inline-block;
+  display: inline-inline;
   font-family: "Work Sans", sans-serif;
   font-size: 26px;
   font-weight: 600;
   line-height: 32px;
-  margin-bottom: 18px;
   padding: 2px 0;
+  position: relative;
+  z-index: 10;
+}
+.hero__headline-text::before {
+  background: #d5e002;
+  content: " ";
+  height: 100%;
+  position: absolute;
+  left: -24px;
+  top: 0;
+  width: 25px;
 }
 @media (min-width: 1366px) {
-  .hero__headline {
+  .hero__headline-text {
     font-size: 40px;
     line-height: 48px;
     max-width: 400px;
@@ -349,7 +370,6 @@ button {
   padding-left: 12px;
 }
 .space__card {
-  border: solid 1px #fff;
   width: 268px;
   height: 308px;
   display: block;
@@ -558,27 +578,27 @@ button {
 .products-card__paragraph {
   margin-bottom: 18px;
 }
-.products-card__label {
+.products-card__label, .events-card__label {
   display: block;
   font-size: 13px;
   line-height: 15px;
   font-weight: 400;
 }
-.products-card__price {
+.products-card__price, .events-card__price {
   display: inline-block;
   font-size: 18px;
   font-weight: 700;
   line-height: 21px;
   margin-top: 3px;
 }
-.products-card__price .sup {
+.products-card__price .sup, .products-card__price .events-card__sup, .events-card__price .sup, .events-card__price .events-card__sup {
   font-size: 15px;
   line-height: 18px;
   font-weight: 400;
   position: relative;
   top: -5px;
 }
-.products-card__buttons-group {
+.products-card__buttons-group, .events-card__buttons-group {
   bottom: 0;
   display: flex;
   left: 0;
@@ -588,16 +608,229 @@ button {
 .products-card__button {
   flex: 1;
 }
-.products-button {
+.products-button, .events-button {
   background: #ff6819;
   color: #fff;
   display: flex;
   justify-content: center;
   width: 168px;
 }
-.products-button__icon {
+.products-button__icon, .events-button__icon {
   margin-right: 14px;
   width: 14px;
+}
+
+.form {
+  height: 717px;
+  width: 100%;
+  background-color: #efefef;
+}
+.form__title {
+  margin-top: 32px;
+  font-size: 28px;
+  font-weight: 600;
+}
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 12px;
+}
+.form__table {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.form__input {
+  margin-bottom: 27px;
+  border: none;
+  border-bottom: solid 1px #000;
+  background-color: #e8e8e8;
+  height: 38px;
+}
+.form__input--select {
+  font-weight: 700;
+  font-size: 14px;
+  background-color: #efefef;
+}
+.form__input--message {
+  height: 94px;
+}
+.form__label {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #353535;
+  opacity: 0.8;
+}
+.form__box {
+  margin-bottom: 28px;
+  /* Doble-tamaño Checkboxes */
+  -ms-transform: scale(1.5);
+  /* IE */
+  -moz-transform: scale(1.5);
+  /* FF */
+  -webkit-transform: scale(1.5);
+  /* Safari y Chrome */
+  -o-transform: scale(1.5);
+  /* Opera */
+  border-radius: 0;
+}
+.form__box--label {
+  opacity: 0.8;
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 8px;
+}
+.form__box--label a {
+  text-decoration: underline;
+  color: #18a8f5;
+  font-weight: 700;
+}
+.form__button {
+  width: 114px;
+  height: 40px;
+  padding: 10px 31px;
+}
+
+.contact__span-wrapper {
+  margin-top: 14px;
+  height: 137px;
+  display: flex;
+  flex-direction: column;
+}
+.contact__span {
+  font-size: 14px;
+  line-height: 20px;
+}
+.contact__span--bold {
+  font-weight: 500;
+}
+.contact__span--regular {
+  font-weight: 400;
+}
+.contact__span--regular:not(:last-of-type) {
+  margin-top: 4px;
+}
+
+.events {
+  background: #d6a071;
+  overflow: hidden;
+}
+.events__container {
+  padding: 32px 12px;
+}
+.events__headline {
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px;
+  margin-bottom: 10px;
+}
+.events__paragraph {
+  margin-bottom: 32px;
+}
+.events__group {
+  margin-bottom: 28px;
+  display: flex;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin-right: -24px;
+  padding-right: 12px;
+}
+.events-card {
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  flex-shrink: 0;
+  padding: 18px;
+  position: relative;
+  width: 268px;
+}
+.events-card:not(:last-child) {
+  margin-right: 10px;
+}
+.events-card__date {
+  border: 1px solid #000;
+  height: 63px;
+  margin-bottom: 15px;
+  padding: 15px 10px;
+  width: 63px;
+}
+.events-card__date-day, .events-card__date-month {
+  display: block;
+}
+.events-card__date-day {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 16px;
+  margin-bottom: 7px;
+}
+.events-card__date-month {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+}
+.events-card__flag {
+  background: #ff6819;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  padding: 4px 17px;
+  position: absolute;
+  right: 0;
+  top: 18px;
+}
+.events-card__card-headline {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 16px;
+  margin-bottom: 10px;
+}
+.events-card__categories-group {
+  background: #ff6819;
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 0 8px 3px;
+}
+.events-card__category {
+  font-size: 12px;
+  line-height: 14px;
+}
+.events-card__category:not(:last-child)::after {
+  content: " |";
+  font-size: 10px;
+  margin-left: 3px;
+  position: relative;
+  top: -2px;
+}
+.events-card__participants {
+  display: flex;
+  margin-bottom: 18px;
+}
+.events-card__participants-icon {
+  margin-right: 9px;
+  width: 22px;
+}
+.events-card__participants-going {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+}
+.events-card__participants-capacity {
+  color: #5d5d5d;
+  font-weight: 400;
+}
+.events-card__price {
+  margin-bottom: 32px;
+}
+.events-card__buttons-group {
+  justify-content: space-between;
+  position: relative;
+}
+.events-card__button {
+  width: calc(50% - 2px);
+}
+.events-button {
+  background: #000;
 }
 
 /*# sourceMappingURL=/src.e31bb0bc.css.map */
